@@ -1,0 +1,18 @@
+#using Python
+from ultralytics import YOLO
+
+# Load a YOLO11 model from a pre-trained weights file
+model = YOLO("yolo11n.pt")
+
+# Run MODE mode using the custom arguments ARGS (guess TASK)
+model.MODE(ARGS)
+
+
+#using CLI
+yolo TASK MODE ARGS
+
+
+#Tasks/Modes/ARGS :
+TASK (optional) is one of (detect, segment, classify, pose, obb)
+MODE (required) is one of (train, val, predict, export, track, benchmark)
+ARGS (optional) are arg=value pairs like imgsz=640 that override defaults.
